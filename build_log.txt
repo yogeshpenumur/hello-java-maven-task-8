@@ -1,0 +1,66 @@
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Task-8
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/yogeshpenumur/hello-java-maven-task-8
+ > git init /var/lib/jenkins/workspace/Task-8 # timeout=10
+Fetching upstream changes from https://github.com/yogeshpenumur/hello-java-maven-task-8
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/yogeshpenumur/hello-java-maven-task-8 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/yogeshpenumur/hello-java-maven-task-8 # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision da33079822f43a395c0150e7c05ccd6c5cfd8af7 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f da33079822f43a395c0150e7c05ccd6c5cfd8af7 # timeout=10
+Commit message: "src_commit"
+ > git rev-list --no-walk da33079822f43a395c0150e7c05ccd6c5cfd8af7 # timeout=10
+[Task-8] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn -f pom.xml clean install
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.example:hello >--------------------------
+[INFO] Building hello 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ hello ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ hello ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/Task-8/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ hello ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ hello ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/Task-8/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ hello ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ hello ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ hello ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /var/lib/jenkins/workspace/Task-8/target/hello-1.0.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ hello ---
+[INFO] Installing /var/lib/jenkins/workspace/Task-8/pom.xml to /var/lib/jenkins/.m2/repository/com/example/hello/1.0/hello-1.0.pom
+[INFO] Installing /var/lib/jenkins/workspace/Task-8/target/hello-1.0.jar to /var/lib/jenkins/.m2/repository/com/example/hello/1.0/hello-1.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.263 s
+[INFO] Finished at: 2025-08-15T11:17:21+05:30
+[INFO] ------------------------------------------------------------------------
+Archiving artifacts
+Finished: SUCCESS
